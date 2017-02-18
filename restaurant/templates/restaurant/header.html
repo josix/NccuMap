@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	<title>NCCU|校園地圖</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<!--BootStrap-->
+	<link rel="stylesheet" href="{% static 'restaurant/css/bootstrap.min.css' %}" type = "text/css"/>
+    <script src="{% static 'restaurant/js/jquery.min.js' %}"></script>
+    <script src="{% static 'restaurant/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'restaurant/js/bootstrap.js' %}"></script>	
+
+	<!--Leaflet-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="http://watson.lennardvoogdt.nl/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css">
+	<script src="{% static 'restaurant/js/leaflet.awesome-markers.js' %}"></script>
+ 
+ 	<!-- NLSC -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="{% static 'restaurant/js/leaflet-osm.js' %}"></script>
+	<script src="{% static 'restaurant/js/nlsc.js' %}"></script>
+	<style>
+	ul{
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+		overflow: hidden;
+		/*border: 1px solid #e7e7e7;*/
+		/*background-color: #f3f3f3;*/
+		width:100%;
+		  /*background-color: #333333;*/
+	}
+
+	li {
+		float: left;
+	}
+
+	li a {
+		display: block;
+		 text-align: center;
+		 padding: 14px 16px;
+		 color : #666;
+		 text-decoration: none;
+		 font-size:larger;
+		 float:left;
+	}
+	li a:hover {
+		background-color: #ddd;
+		}
+	#nccu_icon:hover{
+		background-color:#f6f6f6;
+	}
+	</style>
+ 
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+		.container-fluid{
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+    </style>
+</head>
+     
+
+<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" >
+<!-- First row -->
+<!--
+		<div class="row" id="nccu">
+			<div class="col-md-1">
+				<a href="http://www.nccu.edu.tw/"><img src="{% static 'restaurant/img/NCCU_Name.png' %}" class="responsive-img" style='max-height:60px;' alt="face"></a>
+			</div>
+			  -->
+			<!--<div class="col-md-4" style="font-size:larger;float:right" >-->
+			<ul class="nav navbar-nav">
+			<br>
+			 <!-- Home -->
+				<li class="active" >
+					<a href='/'>首頁</a>
+				</li>
+             <!-- End Home -->
+			 <!--Food Map -->
+				<li class="">
+					<a href='/restaurant/'>美食地圖</a>
+				</li>
+             <!-- End Food Map -->
+			 <!--Building Map -->
+				<li class="">
+					<a href='/building/'>
+						建物地圖
+					</a>
+				</li>
+             <!-- End building Map -->
+			 <!--Nccu Map -->
+				<li class="">
+					<a href='http://www.nccu.edu.tw/'>回政大</a>
+				</li>
+             <!-- End Nccu Map -->
+				<li class="">
+					<a href="/search/">
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					</a>
+				</li>
+				<li style="float:right; ">
+				<a id="nccu_icon" style="padding-top:0px; padding-bottom:0px;" href="http://www.nccu.edu.tw/"><img src="{% static 'restaurant/img/NCCU_Name.png' %}" class="responsive-img" style='max-height:60px;' alt="face"></a>
+				</li>
+			<!--</div>-->
+		</div>
+
+<!-- First row end -->
+	<div class="row">
+<!-- Main -->		  
+		<div class="col-sm-12">
+			<div class='container-fluid'>
+			<br>
+			   {% block content %}
+			   {% endblock %}	
+			</div>
+		</div>
+	</div> 
+<!-- Main End -->
+
+<footer>
+	<div id="footer">
+		<p>本網站著作權屬於<a href="http://www.nccu.edu.tw/">國立政治大學</a><br>地址：11605 臺北市文山區指南路二段64號<br></p>
+	</div>
+	
+</footer>	
+</body>
+
+</html>
