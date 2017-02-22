@@ -182,16 +182,16 @@
 	</div>
 </div>
 
-<div class="container-fluid" id='restaurant-wrapper'>
+<div class="container-fluid" id='restaurant-wrapper' style="top:80px;">
     {% for r in restaurants %} 
          <div class='col-lg-7 restaurant-nodule jumbotron'>
             <p>餐廳:<a href="https://www.facebook.com/sasebojapaneserestaurant/"><span class='name'>{{ r.name }}</span></a> </p>
     		<p>電話: <span class='phone'>{{ r.phone_number }}</span></p>
             <p>地址: <span class='address'>{{ r.address }}</span></p>
             <p>營業時間: <span class='opentime'>{{ r.opentime }}</span></p>
-			<p><a href='/comment/{{ r.id }}'>評論</a>     <a href='/comment/{{ r.id }}'>菜單</a></p>
+			<p><a href='/comment/{{ r.id }}'>評論</a>    <a href='/comment/{{ r.id }}'>菜單</a></p>
             <p><button onclick="myFunction({{r.id}})">地圖</button></p>
-			<p style="text-align:right"><a href="#nccu">top</a></p>
+			<p style="text-align:right"><a href="#home">top</a></p>
         </div>
 
 		{% for p in r.photo_set.all %}
