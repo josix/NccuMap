@@ -23,7 +23,16 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="{% static 'restaurant/js/leaflet-osm.js' %}"></script>
 	<script src="{% static 'restaurant/js/nlsc.js' %}"></script>
+
+	<!--Google Map-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQIuQ5CwRLBimMi-EGVXBWBats5x21V3g" async defer></script>
+	<!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />-->
+	<script src='https://unpkg.com/leaflet.gridlayer.googlemutant@latest/Leaflet.GoogleMutant.js'></script>
+
+	<!--WMTS Map-->
+	<script src="https://rawgithub.com/mylen/leaflet.TileLayer.WMTS/master/leaflet-tilelayer-wmts.js"></script>
 	
+	<!--NavBar-->
 	<style>
 	ul{
 		list-style-type: none;
@@ -61,20 +70,40 @@
 		background-color:#EEE;
 	}
 
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-    
-        }
+    html, body, #map {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0; 
+    }
 
-		.container-fluid{
-			margin-right: auto;
-			margin-left: auto;
-			padding-left: 15px;
-			padding-right: 15px;
-		}
+	.container-fluid{
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 10px;
+		padding-right: 15px;
+      	padding-bottom: 15px;
+	}
+
+	 p {font-family:"微軟正黑體";font-size: 16px;}
+	 h3 {font-family:"微軟正黑體";font-weight: 600;}
+	 h4{font-family:"微軟正黑體";font-weight: 600;}
+
+	 .bg-1 { 
+	      background-color: #1abc9c;
+	      color: #ffffff;
+	  }
+	 
+	 .bg-2 { 
+	      background-color: #474e5d;
+	      color: #ffffff;
+	 }
+	 
+	 .bg-3 { 
+	      background-color: #ffffff; 
+	      color: #555555;
+	  }
+
     </style>
 </head>
      
@@ -92,7 +121,7 @@
 			
 			<!--Food Map -->
 			<li class="">
-				<a href='/restaurant/'>美食地圖</a>
+				<a href='/restaurant/'>店家地圖</a>
 			</li>
             <!-- End Food Map -->
 
@@ -133,7 +162,7 @@
 <!-- Main End -->
 
 <footer style="position:fixed;bottom:0px;background:ivory;width:100%">
-	<div id="footer" style="margin:10px">
+	<div id="footer" style="margin:0px; padding-left:40px; padding-top:5px;">
 		<p >本網站著作權屬於<a href="http://www.nccu.edu.tw/">國立政治大學</a><br>地址：11605 臺北市文山區指南路二段64號<br></p>
 	</div>
 </footer>	

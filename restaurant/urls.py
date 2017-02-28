@@ -11,6 +11,7 @@ urlpatterns = [
 	url(r'^bus/', views.bus,name = 'Bus Map'),
 	url(r'^building/', views.building,name = 'Building Map'),
 	#url(r'^weather/', views.weather,name = ' Map'),
-	url(r'^search/',include('haystack.urls')),	
+	url(r'^search/',include('haystack.urls')),
+
 	url(r'^store/(?P<path>.*)$', 'django.views.static.serve',{'document_root':settings.UPLOAD_ROOT}),
 ]

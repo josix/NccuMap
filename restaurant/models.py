@@ -9,9 +9,11 @@ class Restaurant(models.Model):
 	opentime = models.CharField(max_length=50,null=True,blank=True)
 	longitude = models.FloatField(null=True,blank=True,default=None)
 	latitude = models.FloatField(null=True,blank=True,default=None)
-	
+	fb_link = models.CharField(max_length=500,null=True)
+	menu_link = models.CharField(max_length=500,null=True)
+
 	def __str__(self):
-		return '%s %s %s %s %s %s' %(self.name,self.phone_number,self.address,self.opentime,self.longitude,self.latitude)
+		return '%s %s %s %s %s %s %s %s' %(self.name,self.phone_number,self.address,self.opentime,self.longitude,self.latitude,self.fb_link,self.menu_link)
 		
 class Comment(models.Model):
 	content=models.CharField(max_length=255)
