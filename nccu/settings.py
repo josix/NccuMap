@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'nccu.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'nccufood',
+        'NAME': 'NCCU_MAP',
         'USER': 'postgres',
         'PASSWORD': '1234',
         #'HOST': '127.0.0.1',

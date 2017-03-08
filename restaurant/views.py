@@ -74,7 +74,11 @@ def bus(request):
 def building(request):
 	return render(request,'restaurant/building.html')
 
+'''
+No use --> see haystack.views.SearchView
+
 def RestaurantSearch(request):
 	form=RestaurantSearchForm(request.GET)
 	restaurant=form.search()
 	render_to_response("search/search.html",{"restaurant":restaurant})
+'''

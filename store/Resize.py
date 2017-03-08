@@ -1,9 +1,11 @@
 from PIL import Image
 import glob
-filepng=glob.glob('*.png')
+#'*.jpeg' | '*.jpg'  | '*.png'
+filepng=glob.glob('*.jpg')
 print(filepng)
 for i in filepng:
-	im = Image.open('i')
+	im = Image.open(i)
 	im2 = im.resize((350,315))
-im2.save("1.png")
-print(im2.size)
+	im2.save(i[:-3]+"png")
+#print(im2.size)
+

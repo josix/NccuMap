@@ -1,16 +1,16 @@
 {%extends "restaurant/header.html"%}
 
 {% block content %}
-<div class="container-fluid">
-	<h1 class="text-info" >增加新的餐廳</h1>
-	<p class="text-info"  >---政大周邊新開幕餐廳</p>
+<div style="top:-20px;" class="container-fluid">
+	<h1 class="text-info" >增加新的店家</h1>
+	<p class="text-info"  >---政大周邊新開幕店家</p>
 </div>
 <br>
  <form method='POST' action=''> 
-	<div class='container-fluid'>
+	<div style="position:relative;top:-30px;font-size:20px;" class='container-fluid'>
 	    <div class='form-group col-lg-12'>
-	    	<label for="title">餐廳:</label>
-	    	<input type="text" class="form-control" name="name" placeholder="Name of your restaurant" value="{{name}}">
+	    	<label for="title">店家:</label>
+	    	<input type="text" class="form-control" name="name" placeholder="Name of your store" value="{{name}}">
 	  	</div>
 
 	  	<div class='form-group col-lg-12'>
