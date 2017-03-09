@@ -25,7 +25,7 @@ SECRET_KEY = 'b8)#!ns2#5qk@-$3^%yf&duf8d6swt%zsfm8%9$(90-*%%qvvz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["140.119.55.171"]
+ALLOWED_HOSTS = ["140.119.221.77", "maps.nccu.edu.tw"]
 
 
 # Application definition
