@@ -264,7 +264,7 @@ function clearMarks(){
     		<p>電話: <span class='phone'>{{ r.phone_number }}</span></p>
             <p>地址: <span class='address'>{{ r.address }}</span></p>
             <p>營業時間: <span class='opentime'>{{ r.opentime }}</span></p>
-			<p><a href='/comment/{{ r.id }}'>評論</a>    <a href='{{r.menu_link}}' target="_blank">菜單</a></p>
+			<p><a href='{{r.menu_link}}' target="_blank">菜單</a></p>
             <p><button onclick="myFunction({{r.id}})">地圖</button></p>
 			<p style="text-align:right"><a href="#home">top</a></p>
         </div>
@@ -289,7 +289,7 @@ function clearMarks(){
                         <p>電話:{{result.object.phone_number}}</p>
                         <p>地址:{{result.object.address}}</p>
                         <p>營業時間:{{result.object.opentime}}</p>
-						<p><a href='/comment/{{ result.object.id }}'>評論</a>    <a href='{{result.object.menu_link}}' target="_blank">菜單</a></p>
+						<p><a href='{{result.object.menu_link}}' target="_blank">菜單</a></p>
 						<button onclick="myFunction({{result.object.id}})">地圖</button>
 						<button onclick="location.href='/search';">回搜尋頁面</button>
                 </p>
