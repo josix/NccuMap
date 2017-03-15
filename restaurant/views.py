@@ -11,8 +11,10 @@ def home(request):
 def weather(request):
 	return render(request,'restaurant/weather.html')	
 '''	
-def restaurant(request):
+def restaurant(request, lat = "24.987579", lon = "121.576060"):
 	restaurants = Restaurant.objects.all()
+	lat = float(lat)
+	lon = float(lon)
 	return render_to_response('restaurant/restaurant.html',locals())
 
 def add_restaurant(request):
