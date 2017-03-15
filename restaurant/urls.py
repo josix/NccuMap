@@ -5,9 +5,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 	url(r'^$', views.home,name = 'home'),
+
 	url(r'^restaurant/$', views.restaurant,name = 'Food Map'),
 	url(r'^restaurant/(?P<lat>[0-9]+(\.)?[0-9]+),(?P<lon>[0-9]+(\.)?[0-9]+)/$', views.restaurant),
-	url(r'^comment/(\d{1,157})/$',views.comment,name="comment"),
+	#url(r'^comment/(\d{1,157})/$',views.comment,name="comment"),
 	url(r'^add/', views.add_restaurant,name='add_restaurant'),
 	url(r'^bus/', views.bus,name = 'Bus Map'),
 	url(r'^building/', views.building,name = 'Building Map'),
