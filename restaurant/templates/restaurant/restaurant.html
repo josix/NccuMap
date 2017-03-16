@@ -75,6 +75,21 @@
 	} )
 	.addControl(new L.Control.Scale())
 	.addControl(new L.Control.Layers(baseMaps, overlayMaps));
+	var lat = {{lat}};
+	var lon = {{lon}};
+	if(lat != 24.987579 || lon != 121.576060){
+		var location_marker = L.marker([lat.toString(), lon.toString()], {
+				icon:L.AwesomeMarkers.icon({
+				 icon:'location-arrow',
+				 prefix:'fa',
+				 markerColor:'red',
+				 spin:true,
+				})
+		}).bindPopup("You're Here.");
+		map.addLayer(location_marker);
+		location_marker.openPopup([lat, lon]);
+	}
+
 
 //餐廳類(1-79)
 	var restaurant_arr = [];
