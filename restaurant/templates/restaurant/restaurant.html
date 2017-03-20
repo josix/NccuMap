@@ -75,6 +75,11 @@
 	} )
 	.addControl(new L.Control.Scale())
 	.addControl(new L.Control.Layers(baseMaps, overlayMaps));
+	L.control.locate( {
+		locateOptions: {
+			maxZoom: 18 
+			}
+	}).addTo(map);
 	var lat = {{lat}};
 	var lon = {{lon}};
 	if(lat != 24.987579 || lon != 121.576060){

@@ -120,3 +120,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #Photo files
 UPLOAD_ROOT = os.path.join(BASE_DIR, 'store')
 UPLOAD_URL = '/store/'
+SECURE_SSL_REDIRECT = False
